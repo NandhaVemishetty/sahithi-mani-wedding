@@ -1,4 +1,4 @@
-const weddingDate = new Date('2026-08-16T10:30:00+05:30');
+const weddingDate = new Date('2026-08-16T10:45:00+05:30');
 const gate = document.getElementById('gate');
 const invitation = document.getElementById('invitation');
 const audio = document.getElementById('bgMusic');
@@ -19,9 +19,9 @@ const eventData = {
   },
   wedding: {
     ritual: 'Celebration 3', day: 'Sunday, 16 August 2026', title: 'The Wedding',
-    time: '10:30 AM', venue: 'Nandana A/C Gardens', image: '../assets/wedding.png', alt: 'Traditional Telugu wedding ceremony illustration',
+    time: '10:45 AM', venue: 'Nandana A/C Gardens', image: '../assets/wedding.png', alt: 'Traditional Telugu wedding ceremony illustration',
     theme: 'wedding-theme', tagline: 'Two hearts, two families and one beautiful beginning.',
-    note: 'Wedding ceremony at 10:30 AM. Lunch follows at 12:30 PM.'
+    note: 'Wedding ceremony at 10:45 AM. Lunch follows at 12:30 PM.'
   },
   reception: {
     ritual: 'Celebration 4', day: 'Tuesday, 18 August 2026', title: 'Wedding Reception',
@@ -100,7 +100,7 @@ document.getElementById('rsvpForm').addEventListener('submit', event => {
 
 document.getElementById('calendarBtn').addEventListener('click', event => {
   event.preventDefault();
-  const calendar = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20260816T050000Z\nDTEND:20260816T073000Z\nSUMMARY:Wedding of Mani Krishna & Dr. Sahithi\nLOCATION:Nandana A/C Gardens\nDESCRIPTION:Wedding ceremony at 10:30 AM. Lunch follows at 12:30 PM.\nEND:VEVENT\nEND:VCALENDAR`;
+  const calendar = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:20260816T051500Z\nDTEND:20260816T073000Z\nSUMMARY:Wedding of Mani Krishna & Dr. Sahithi\nLOCATION:Nandana A/C Gardens\nDESCRIPTION:Wedding ceremony at 10:45 AM. Lunch follows at 12:30 PM.\nEND:VEVENT\nEND:VCALENDAR`;
   const blob = new Blob([calendar], { type: 'text/calendar' });
   const url = URL.createObjectURL(blob); const link = document.createElement('a');
   link.href = url; link.download = 'Mani-Sahithi-Wedding.ics'; link.click(); URL.revokeObjectURL(url);
